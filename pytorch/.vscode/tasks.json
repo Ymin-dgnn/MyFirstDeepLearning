@@ -4,15 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "command": "/Users/im-yeonji/opt/anaconda3/pkgs/python-3.8.1-h359304d_1",
-            "isShellCommand": true,
-            "args": [
-                "${file}"
-            ],
-            "showOutput": "always"
-            /*"label": "echo",
+            "label": "echo",
             "type": "shell",
-            "command": "echo Hello"*/
+            "command": "echo Hello"
         }
     ]
 }

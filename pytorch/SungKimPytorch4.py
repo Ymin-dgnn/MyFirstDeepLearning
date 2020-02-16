@@ -1,3 +1,5 @@
+#%%
+
 import torch
 from torch.autograd import Variable
 
@@ -32,3 +34,6 @@ for epoch in range(10):
     print("progress:", epoch, l.data[0])
 
 print("pridict (after training)", 4, forward(4).data[0])
+
+
+# %%

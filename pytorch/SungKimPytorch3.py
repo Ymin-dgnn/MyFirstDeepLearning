@@ -1,3 +1,4 @@
+#%%
 import numpy as np
 
 x_data = [1.0, 2.0, 3.0]
@@ -35,3 +36,6 @@ for epoch in range(100):
         l = loss(x_val, y_val)
     print("progress:", epoch, "w=", w, "loss=", l)
 print("predict (after training)", "4 hours", forward(4))
+
+
+# %%
