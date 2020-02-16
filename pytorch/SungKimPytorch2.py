@@ -12,7 +12,7 @@ w = 1.0  # random guess: random value, 1.0
 
 
 def forward(x):
-    return x * w  # originally x * w + d
+    return x * w  # originally x * w + b
 
 # Loss function
 
