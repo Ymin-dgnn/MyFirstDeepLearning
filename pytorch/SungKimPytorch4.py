@@ -1,4 +1,3 @@
-#%%
 
 import torch
 from torch.autograd import Variable
@@ -6,8 +5,8 @@ from torch.autograd import Variable
 x_data = [1.0, 2.0, 3.0]
 y_data = [2.0, 4.0, 6.0]
 
-w = Variable(torch.Tensor([1.0]), require_grad=True)  # Any random value
-# require_grad : I need to cumpute gradient
+w = torch.Tensor([1.0])
+w.require_grad = True  # Any random value
 
 
 def forward(x):
@@ -34,6 +33,3 @@ for epoch in range(10):
     print("progress:", epoch, l.data[0])
 
 print("pridict (after training)", 4, forward(4).data[0])
-
-
-# %%
