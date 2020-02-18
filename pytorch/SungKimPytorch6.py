@@ -1,7 +1,11 @@
+import torch
+import torch.nn as nn
 import torch.nn.functional as F
+import torch.optim as optim
+import torch.utils.data as data_utils
 
-x_data = Variable(torch.Tensor([[1.0], [2.0], [3.0], [4.0]]))
-y_data = Variable(torch.Tensor([[0.], [0.], [1.], [1.]]))
+x_data = torch.Tensor([[1.0], [2.0], [3.0], [4.0]])
+y_data = torch.Tensor([[0.], [0.], [1.], [1.]])
 
 
 class Model(torch.nn.Module):
@@ -25,7 +29,8 @@ for epoch in range(500):
 
     # Compute and print loss
     loss = criterion(y_pred, y_data)
-    print(epoch, loss.data[0])
+    print(epoch, tensor.item(0))
+    #print(epoch, loss.data[0])
 
     # Zero gradients, perform a backward pass, and update the weights.
     optimizer.zero_grad()  # initialize
@@ -33,7 +38,7 @@ for epoch in range(500):
     optimizer.step()  # update
 
     # After training
-hour_var = Variable(torch.Tensor([[1.0]]))
+hour_var = torch.Tensor([[1.0]])
 print("predict 1 hour", 1.0, model.forward(hour_var).data[0][0] > 0.5)
-hour_var = Variable(torch.Tensor([[7.0]]))
+hour_var = torch.Tensor([[7.0]])
 print("predict 7 hour", 7.0, model.forward(hour_var).data[0][0] > 0.5)
