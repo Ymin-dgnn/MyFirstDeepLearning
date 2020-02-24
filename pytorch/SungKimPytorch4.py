@@ -5,9 +5,8 @@ from torch.autograd import Variable
 x_data = [1.0, 2.0, 3.0]
 y_data = [2.0, 4.0, 6.0]
 
-w = torch.Tensor([1.0])
-w.require_grad = True  # Any random value
-
+w = torch.tensor([1.0]) # Any random value
+w.requires_grad_(True)
 
 def forward(x):
     return x * w

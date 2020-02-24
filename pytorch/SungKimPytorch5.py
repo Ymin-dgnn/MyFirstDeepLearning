@@ -1,9 +1,9 @@
-# %%
+
 import torch
 from torch.autograd import Variable
 
-x_data = Variable(torch.Tensor([[1.0], [2.0], [3.0]]))
-y_data = Variable(torch.Tensor([[2.0], [4.0], [6.0]]))
+x_data = torch.Tensor([[1.0], [2.0], [3.0]])
+y_data = torch.Tensor([[2.0], [4.0], [6.0]])
 
 
 class Model(torch.nn.Module):  # subclass of torch.nn.Module
@@ -48,7 +48,6 @@ for epoch in range(500):
     optimizer.step()  # update
 
     # After training
-    hour_var = Variable(torch.Tensor([[4.0]]))
+    hour_var = torch.Tensor([[4.0]])
     print("predict (after training)", 4, model.forward(hour_var).data[0][0])
 
-# %%
